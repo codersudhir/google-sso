@@ -5,6 +5,7 @@ import '../Home/Homepage.css';
 import { Chart } from "react-google-charts";
 import Carousel from './Carousel';
 import Header from '../Header/Header';
+import Image from 'next/image';
 interface Props {
     profile: any
     provider: string
@@ -39,8 +40,8 @@ const Dashboard = ({ provider, profile, onLogout }: Props) => {
       <div >
        {user.map((value,index)=>{
         return (
-            < span style={{display:'flex',gap:"20px",color:'white'}}>
-            <img src={value.img} width={"50px"}  alt="" />
+            < span key={index} style={{display:'flex',gap:"20px",color:'white'}}>
+            <Image src={value.img} width={100} height={100}  alt={value.lastname} />
             <p>{value.firstname}</p>
             <p>{value.lastname}</p>
             </span>

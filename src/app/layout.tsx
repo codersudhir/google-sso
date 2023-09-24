@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" style={{border:"1px solid red"}}>
+    <html lang="en">
       <body>
        
         {children}

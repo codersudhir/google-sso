@@ -1,7 +1,6 @@
 "use client"
 import React, { useCallback, useState } from 'react';
 import '../Home/Homepage.css';
-import  User from '../../src/app/user';
 import {
   LoginSocialGoogle,
   LoginSocialFacebook,
