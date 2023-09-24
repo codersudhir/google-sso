@@ -1,0 +1,30 @@
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    width: 300px; /* Adjust the width to your preference */
+    margin: 0 auto;
+    transition: transform 0.5s;
+  }
+
+  .carousel img {
+    width: 100%;
+  }
+
+  .carousel-button {
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  .active {
+    transform: translateX(0);
+  }
+
+  .carousel img:not(.active) {
+    transform: translateX(100%);
+  }
