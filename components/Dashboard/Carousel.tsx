@@ -7,7 +7,10 @@ const Carousel = () => {
     'https://picsum.photos/200',
     'https://picsum.photos/201',
     'https://picsum.photos/202',
+    
   ];
+
+  
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -22,15 +25,16 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel-container">
+    <div  style={{marginTop:"20px"}}>
       <div className="carousel">
         {images.map((image, index) => (
           <img
             key={index}
             src={image}
-            alt={`Image ${index + 1}`}
+           
             className={index === currentIndex ? 'active' : ''}
           />
+          
         ))}
       </div>
       <button className="carousel-button" onClick={prevSlide}>

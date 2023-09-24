@@ -4,6 +4,7 @@ import React from 'react'
 import '../Home/Homepage.css';
 import { Chart } from "react-google-charts";
 import Carousel from './Carousel';
+import Header from '../Header/Header';
 interface Props {
     profile: any
     provider: string
@@ -29,6 +30,9 @@ const Dashboard = ({ provider, profile, onLogout }: Props) => {
     is3D: false,
   };
   return (
+    <>
+    {/* this header i used only in dashbaord page but in main project heder is used only in layout page  */}
+    <Header/>
     <div>
 
     <div style={{display:"flex",gap:"10%"}} >
@@ -54,8 +58,9 @@ const Dashboard = ({ provider, profile, onLogout }: Props) => {
       </div>
      
     </div>
+    {/* this is carousel component due less time avilability i am ot able to focus on css part */}
    <Carousel/>
-  </div>
+  </div></>
   )
 }
 
