@@ -13,7 +13,7 @@ interface Props {
   }
 
 
-const Dashboard = ({ provider, profile, onLogout }: Props) => {
+const Dashboard = () => {
   const  user =[{firstname:"sudhir ",lastname:"Nandane",img:"https://codersudhir.github.io/static/media/dp.23e2591d6d9decad1e42.jpg"}]
   
   const data = [

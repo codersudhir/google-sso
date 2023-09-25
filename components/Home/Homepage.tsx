@@ -2,8 +2,8 @@
 import React, { useCallback, useState } from 'react';
 import '../Home/Homepage.css';
 import {
-  LoginSocialGoogle ,
-} from "reactjs-social-login";
+  LoginSocialGoogle,
+} from 'reactjs-social-login';
 
 import {
   FacebookLoginButton,
@@ -39,7 +39,7 @@ const router=useRouter()
       <div className={`App ${provider && profile ? 'hide' : ''}`}>
         <h1 className="title"> Google SSO APP</h1>
         {provider && profile && (
-        <Dashboard provider={provider} profile={profile} onLogout={onLogout} />
+        <Dashboard />
       )}
 
 
@@ -49,12 +49,12 @@ const router=useRouter()
           onLoginStart={onLoginStart}
           redirect_uri={"/Dashboard"}
          
-          onResolve={({ provider, data }: IResolveParams) => {
+          onResolve={({ provider, data }: any) => {
             setProvider(provider);
             setProfile(data);
           
           }}
-          onReject={err => {
+          onReject={(err:any) => {
           console.log(err);
           
           }}
