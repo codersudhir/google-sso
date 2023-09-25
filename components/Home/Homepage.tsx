@@ -38,13 +38,10 @@ const router=useRouter()
     
       <div className={`App ${provider && profile ? 'hide' : ''}`}>
         <h1 className="title"> Google SSO APP</h1>
-        {provider && profile && (
-        <Dashboard />
-      )}
-
+      
 
       {/* this is google sso code for authenticatin this login is not working becouse google security blocked me i and not gerating clent id  */}
-        <LoginSocialGoogle 
+     { typeof window !== undefined &&  <LoginSocialGoogle 
           client_id={"744e40ec308516b31e8bfb2930a07ce134ecfe03"}
           onLoginStart={onLoginStart}
           redirect_uri={"/Dashboard"}
@@ -60,7 +57,7 @@ const router=useRouter()
           }}
         >
           <GoogleLoginButton />
-        </LoginSocialGoogle>
+        </LoginSocialGoogle>}
       
       </div>
     </>
